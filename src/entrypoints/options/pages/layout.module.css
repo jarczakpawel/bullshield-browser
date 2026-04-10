@@ -1,0 +1,159 @@
+.main {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 18px 0;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: clamp(248px, 24vw, 280px) minmax(0, 1fr);
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.navigation,
+.content {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  padding: 0.15rem 0.35rem 1rem 0;
+}
+
+.sidebarTop {
+  padding-right: 0.35rem;
+}
+
+.languageSelect {
+  width: 100%;
+}
+
+.languageSelect select {
+  width: 100%;
+  max-width: none;
+}
+
+.sidebarDivider {
+  height: 1px;
+  margin: 1rem 0 1.1rem;
+  background-color: var(--color-ui-border-light);
+}
+
+.navList {
+  list-style: none;
+  padding: 0 0 0.25rem;
+  margin: 0;
+}
+
+.navList li {
+  padding: 0;
+}
+
+.navList li + li {
+  margin-top: 0.35rem;
+}
+
+.navList a {
+  display: block;
+  padding: 0.9rem 0.95rem;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.navList a:hover {
+  border-color: var(--color-ui-border-light);
+  background-color: color-mix(in srgb, var(--color-ui-bg-primary) 60%, transparent);
+}
+
+.selectedPage a {
+  border-color: var(--color-ui-border-active);
+  background-color: color-mix(in srgb, var(--color-ui-bg-active) 16%, transparent);
+  -webkit-text-stroke: 0.6px currentColor;
+}
+
+.content {
+  padding: 0 0 1rem;
+}
+
+.content h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0;
+}
+
+.footer {
+  height: 55px;
+  background-color: var(--color-bg-light);
+}
+
+.footer > div {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-size: 0.8em;
+  gap: 0.6em;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+.footerSeparator {
+  opacity: 0.55;
+}
+
+@media (max-width: 860px) {
+  .main {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+    grid-template-rows: auto auto;
+  }
+
+  .container {
+    height: auto;
+    overflow: visible;
+    grid-template-columns: 1fr;
+    padding-top: 14px;
+  }
+
+  .navigation,
+  .content {
+    height: auto;
+    overflow: visible;
+    scrollbar-gutter: auto;
+  }
+
+  .navigation {
+    padding-right: 0;
+  }
+
+  .sidebarTop {
+    padding-right: 0;
+  }
+}

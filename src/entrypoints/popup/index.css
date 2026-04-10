@@ -1,0 +1,92 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+::selection {
+  color: var(--color-text-inverted);
+  background: var(--color-bg-inverted);
+}
+
+html,
+body {
+  width: 800px;
+  min-width: 800px;
+  max-width: 800px;
+  height: 600px;
+  min-height: 600px;
+  max-height: 600px;
+  margin: 0;
+  padding: 0;
+  font-family:
+    'Open Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Ubuntu,
+    Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow: hidden;
+}
+
+#root {
+  width: 800px;
+  min-width: 800px;
+  max-width: 800px;
+  height: 600px;
+  min-height: 600px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  font: inherit;
+}
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar-thumb) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}

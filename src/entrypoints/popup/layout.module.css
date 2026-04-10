@@ -1,0 +1,338 @@
+.shell {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 164px;
+  min-width: 164px;
+  border-right: 1px solid var(--color-ui-border-light);
+  background: var(--color-bg-light);
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brandTitle {
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.brandSub {
+  opacity: 0.7;
+  font-size: 0.98em;
+  line-height: 1.35;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navButton,
+.menuButton {
+  border: 1px solid var(--color-ui-border-light);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 1.02em;
+}
+
+.navButton.active {
+  background: var(--color-bg-primary);
+  border-color: var(--color-ui-border-active);
+}
+
+.menuButton:hover,
+.navButton:hover {
+  background: var(--color-bg-primary);
+}
+
+.sidebarBottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebarMeta {
+  font-size: 0.9em;
+  opacity: 0.7;
+  padding-left: 2px;
+}
+
+.detailsRail {
+  width: 270px;
+  min-width: 270px;
+  border-right: 1px solid var(--color-ui-border-light);
+  background: var(--color-bg-light);
+  overflow: hidden;
+}
+
+.detailsRailInner {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.detailsRailTitle {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 14px 12px;
+  font-size: 1.1em;
+  font-weight: 700;
+  background: var(--color-bg-light);
+  border-bottom: 1px solid var(--color-ui-border-light);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton,
+.ghostButton,
+.dangerButton {
+  border-radius: 10px;
+  padding: 9px 11px;
+  cursor: pointer;
+  font-size: 0.98em;
+  color: inherit;
+}
+
+.primaryButton {
+  border: 1px solid var(--color-ui-border-active);
+  background: var(--color-bg-light);
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-ui-border-light);
+  background: var(--color-bg-light);
+}
+
+.ghostButton {
+  border: 1px dashed var(--color-ui-border-light);
+  background: transparent;
+}
+
+.dangerButton {
+  border: 1px solid rgba(220, 80, 80, 0.5);
+  background: transparent;
+}
+
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.ghostButton:disabled,
+.dangerButton:disabled,
+.navButton:disabled,
+.menuButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+}
+
+.historyTitleLarge {
+  font-size: 1.16em;
+  font-weight: 700;
+}
+
+.historyHeaderActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.historyLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.9fr);
+  gap: 10px;
+  padding: 0 12px;
+  min-height: 420px;
+}
+
+.historyList,
+.historyActionsCard {
+  min-width: 0;
+  border: 1px solid var(--color-ui-border-light);
+  border-radius: 12px;
+  background: var(--color-bg-light);
+  overflow: hidden;
+}
+
+.historyListInner {
+  max-height: 520px;
+  overflow: auto;
+}
+
+.historyItem {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--color-ui-border-light);
+  cursor: pointer;
+}
+
+.historyItemTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.historyItem:last-child {
+  border-bottom: 0;
+}
+
+.historyItem.active {
+  background: var(--color-bg-primary);
+}
+
+.historyTitle {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.98em;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.historyDeleteButton {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.72;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.historyDeleteButton:hover {
+  background: rgba(220, 80, 80, 0.12);
+  color: #ff8f8f;
+  opacity: 1;
+}
+
+.historySummary {
+  margin-top: 6px;
+  font-size: 0.9em;
+  opacity: 0.82;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.historyActionsTop {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.detailSections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detailSection {
+  padding: 10px 11px;
+  border-radius: 10px;
+  background: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailSectionTitle {
+  font-size: 0.95em;
+  font-weight: 700;
+}
+
+.historyDate {
+  margin-top: 6px;
+  font-size: 0.88em;
+  opacity: 0.72;
+}
+
+.historyActionsBody,
+.detailsBody {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.historyActionsTitle {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.uaBlock {
+  padding: 10px 11px;
+  border-radius: 10px;
+  background: var(--color-bg-primary);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.45;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 7px 10px;
+  align-items: start;
+}
+
+.metaLabel {
+  opacity: 0.72;
+}
+
+.metaValue {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.emptyState {
+  padding: 16px;
+  opacity: 0.72;
+  line-height: 1.45;
+}

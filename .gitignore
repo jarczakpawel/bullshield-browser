@@ -1,0 +1,26 @@
+## IDEs
+/.vscode
+/.idea
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## dependencies
+/node_modules
+
+## build
+/dist
+/dist*
+/*.zip
+/*.crx
+
+## reports and temp
+/coverage
+/temp
+/tmp
+.vite
+*.log
+
+## local store assets
+/docs/chrome-web-store/_private-assets/

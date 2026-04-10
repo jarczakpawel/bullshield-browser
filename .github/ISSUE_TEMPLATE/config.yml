@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-config.json
+# docs: https://git.io/JP3tm
+
+blank_issues_enabled: false
+
+contact_links:
+  - name: 🗣 Ask a Question, Discuss
+    url: https://github.com/jarczakpawel/bullshield-browser/discussions
+    about: Feel free to ask anything

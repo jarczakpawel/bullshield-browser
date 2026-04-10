@@ -1,0 +1,60 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.label {
+  font-size: 0.82em;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-align: left;
+}
+
+.select {
+  min-width: 250px;
+  max-width: min(100vw - 2rem, 320px);
+  min-height: 42px;
+  padding: 0.65em 2.55em 0.65em 0.85em;
+  border-radius: 10px;
+  border: 1px solid var(--color-ui-border-primary);
+  background-color: var(--color-ui-bg-primary);
+  color: var(--color-text-primary);
+  box-sizing: border-box;
+  font: inherit;
+  line-height: 1.2;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 1px),
+    calc(100% - 12px) calc(50% - 1px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.select:hover {
+  border-color: var(--color-ui-border-active);
+}
+
+.select:focus,
+.select:focus-visible,
+.select:active {
+  outline: none;
+  border-color: var(--color-ui-border-primary);
+  box-shadow: none;
+}
+
+.select:disabled {
+  background-color: var(--color-ui-bg-disabled);
+  color: var(--color-text-light);
+  cursor: not-allowed;
+}
+
+.select option {
+  background-color: var(--color-ui-bg-primary);
+  color: var(--color-text-primary);
+}

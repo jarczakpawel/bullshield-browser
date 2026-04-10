@@ -1,0 +1,115 @@
+@import '~/theme/theme.css';
+
+html,
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+  font-family:
+    'Open Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Ubuntu,
+    Arial,
+    sans-serif;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.onboardCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.onboardBadge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.35em 0.7em;
+  border-radius: 999px;
+  background-color: var(--color-bg-info);
+  color: var(--color-text-info);
+  font-size: 0.85em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.onboardSection {
+  border: 1px solid var(--color-ui-border-primary);
+  border-radius: 0.8em;
+  padding: 1em 1.1em;
+  background-color: var(--color-bg-secondary);
+}
+
+.onboardSectionTitle {
+  margin: 0 0 0.7em;
+  font-size: 1.05em;
+}
+
+.onboardSection ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.onboardSection li {
+  margin-bottom: 0.55em;
+  line-height: 1.45;
+}
+
+.onboardSection li:last-child {
+  margin-bottom: 0;
+}
+
+.onboardCheckbox {
+  display: flex;
+  gap: 0.8em;
+  align-items: flex-start;
+  line-height: 1.45;
+}
+
+.onboardCheckbox input {
+  margin-top: 0.2em;
+}
+
+.onboardActions {
+  display: flex;
+  gap: 0.8em;
+  flex-wrap: wrap;
+}
+
+.onboardError {
+  color: #ff8080;
+  line-height: 1.4;
+}
+
+.onboardFootnote {
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+
+select,
+option {
+  font: inherit;
+}
+
+select {
+  color-scheme: light dark;
+}
+
+option {
+  background-color: var(--color-ui-bg-primary);
+  color: var(--color-text-primary);
+}

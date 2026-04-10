@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest.json",
+  "$docs": "https://developer.chrome.com/docs/extensions/reference/manifest",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "name": "__MSG_manifest_name__",
+  "description": "__MSG_manifest_description__",
+  "author": "Pawe\u0142 Jarczak",
+  "homepage_url": "https://github.com/jarczakpawel/bullshield-browser",
+  "default_locale": "en",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "32": "assets/icons/32.png",
+    "48": "assets/icons/48.png",
+    "128": "assets/icons/128.png"
+  },
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "16": "assets/icons/16.png",
+      "32": "assets/icons/32.png",
+      "48": "assets/icons/48.png",
+      "128": "assets/icons/128.png"
+    },
+    "default_title": "__MSG_manifest_action_default_title__"
+  },
+  "commands": {
+    "renew-profile": {
+      "description": "__MSG_manifest_command_renew_useragent__",
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      }
+    }
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "permissions": [
+    "tabs",
+    "alarms",
+    "storage",
+    "scripting",
+    "declarativeNetRequest",
+    "cookies",
+    "webNavigation",
+    "debugger"
+  ],
+  "$what_the_specified_permissions_are_for": {
+    "tabs": "Obtaining the current tab URL to check whether protection is enabled for the active site in the popup",
+    "alarms": "Scheduling profile refresh and other periodic maintenance tasks",
+    "storage": "Persisting Bullshield settings, the active profile, and saved history",
+    "scripting": "Injecting runtime protection code into pages at the correct time",
+    "declarativeNetRequest": "Aligning outgoing request headers with the active browser profile",
+    "cookies": "Passing the active profile payload into the page synchronously when required",
+    "webNavigation": "Preparing profile payloads before page scripts execute",
+    "debugger": "Applying browser-level profile overrides for early, worker, and service-worker-related detection paths"
+  },
+  "incognito": "spanning",
+  "minimum_chrome_version": "120"
+}
