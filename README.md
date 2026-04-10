@@ -13,6 +13,11 @@
   </tr>
 </table>
 
+<p align="center">
+  <strong>Video demo:</strong>
+  <a href="https://www.youtube.com/watch?v=U2T-39w7ZXY">Watch on YouTube</a>
+</p>
+
 ## Overview
 
 Bullshield is a Chromium-first anti-fingerprinting extension built to reduce browser fingerprint inconsistencies by applying one coherent generated profile across the surfaces that websites commonly compare.
